@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Physics Solutions</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background: white;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            font-size: 16px;
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .problem-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        
+        .given {
+            background: #e8f4fd;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin: 10px 0;
+        }
+        
+        .solution {
+            background: #f0f8ff;
+            padding: 15px;
+            border-left: 3px solid #2ecc71;
+            margin: 10px 0;
+        }
+        
+        .final-answer {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .equation {
+            background: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            border-radius: 3px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .formula-summary {
+            background: #f8f9fa;
+            border: 2px solid #6c757d;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .print-button:hover {
+            background: #2980b9;
+        }
+        
+        @media print {
+            .print-button { display: none; }
+            body { margin: 0; padding: 20px; }
+            .problem-section { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">Print Document</button>
+    
+    <div class="header">
+        <h1>Semiconductor Physics Solutions</h1>
+        <p><strong>Detailed Step-by-Step Solutions</strong></p>
+        <p><em>Date: June 22, 2025</em></p>
+    </div>
+
+    <div class="problem-section">
+        <h2>1. Probability of Electron Occupation</h2>
+        
+        <div class="given">
+            <strong>Given:</strong><br>
+            Energy level E = E<sub>F</sub> + 3k<sub>B</sub>T<br>
+            <strong>Find:</strong> Occupation probability at (a) T = 0 K, (b) T = 300 K
+        </div>
+
+        <div class="solution">
+            <h3>Solution:</h3>
+            <p>The Fermi-Dirac distribution function is:</p>
+            <div class="equation">
+                f(E) = 1 / (1 + e<sup>(E - E<sub>F</sub>)/k<sub>B</sub>T</sup>)
+            </div>
+
+            <h3>(a) At T = 0 K:</h3>
+            <ul>
+                <li>For E > E<sub>F</sub>, f(E) = 0 (all states above E<sub>F</sub> are empty)</li>
+                <li>Here, E - E<sub>F</sub> = 3k<sub>B</sub>T > 0, so:</li>
+            </ul>
+            <div class="final-answer">f(E) = 0</div>
+
+            <h3>(b) At T = 300 K:</h3>
+            <ul>
+                <li>Calculate (E - E<sub>F</sub>)/(k<sub>B</sub>T) = 3k<sub>B</sub>T/(k<sub>B</sub>T) = 3</li>
+                <li>Substitute into the distribution:</li>
+            </ul>
+            <div class="equation">
+                f(E) = 1/(1 + e<sup>3</sup>) = 1/(1 + 20.0855) = 1/21.0855 ≈ 0.0474
+            </div>
+            <div class="final-answer">f(E) ≈ 0.0474</div>
+        </div>
+    </div>
+
+    <div class="problem-section">
+        <h2>2. Variation of Fermi Level with Donor Concentration</h2>
+        
+        <div class="given">
+            <strong>Given:</strong><br>
+            • N<sub>C</sub> = 3 × 10<sup>19</sup> cm<sup>-3</sup><br>
+            • N<sub>D</sub> range: 10<sup>12</sup> to 10<sup>13</sup> cm<sup>-3</sup><br>
+            • Complete ionization, room temperature
+        </div>
+
+        <div class="solution">
+            <h3>Solution:</h3>
+            <p>For an n-type semiconductor, the Fermi level (E<sub>F</sub>) relative to the conduction band edge (E<sub>C</sub>) is:</p>
+            <div class="equation">
+                E<sub>C</sub> - E<sub>F</sub> = k<sub>B</sub>T ln(N<sub>C</sub>/N<sub>D</sub>)
+            </div>
+            
+            <p><strong>Key values at 300 K:</strong></p>
+            <ul>
+                <li>k<sub>B</sub>T = 0.02585 eV</li>
+                <li>N<sub>C</sub> = 3 × 10<sup>19</sup> cm<sup>-3</sup></li>
+            </ul>
+
+            <p><strong>Calculate for N<sub>D</sub> values:</strong></p>
+            <table>
+                <tr>
+                    <th>N<sub>D</sub> (cm<sup>-3</sup>)</th>
+                    <th>N<sub>C</sub>/N<sub>D</sub></th>
+                    <th>E<sub>C</sub> - E<sub>F</sub> (eV)</th>
+                </tr>
+                <tr>
+                    <td>10<sup>12</sup></td>
+                    <td>3 × 10<sup>7</sup></td>
+                    <td>0.47</td>
+                </tr>
+                <tr>
+                    <td>10<sup>13</sup></td>
+                    <td>3 × 10<sup>6</sup></td>
+                    <td>0.41</td>
+                </tr>
+            </table>
+
+            <p><strong>Plot Description:</strong></p>
+            <ul>
+                <li><strong>X-axis:</strong> log₁₀ N<sub>D</sub> (from 10<sup>12</sup> to 10<sup>13</sup>)</li>
+                <li><strong>Y-axis:</strong> E<sub>C</sub> - E<sub>F</sub> (in eV)</li>
+                <li><strong>Trend:</strong> As N<sub>D</sub> increases, E<sub>C</sub> - E<sub>F</sub> decreases from 0.47 eV to 0.41 eV</li>
+                <li><strong>Curve:</strong> Exponential decay (linear in log scale)</li>
+            </ul>
+
+            <div class="final-answer">
+                Conclusion: Fermi level moves closer to E<sub>C</sub> as N<sub>D</sub> increases
+            </div>
+        </div>
+    </div>
+
+    <div class="problem-section">
+        <h2>3. Intrinsic Resistivity of Silicon</h2>
+        
+        <div class="given">
+            <strong>Given:</strong><br>
+            • n<sub>i</sub> = 1.5 × 10<sup>16</sup> m<sup>-3</sup><br>
+            • μ<sub>n</sub> = 0.13 m²/V·s, μ<sub>p</sub> = 0.05 m²/V·s<br>
+            • T = 300 K
+        </div>
+
+        <div class="solution">
+            <h3>Solution:</h3>
+            <p>Intrinsic resistivity (ρ<sub>i</sub>) is given by:</p>
+            <div class="equation">
+                ρ<sub>i</sub> = 1/σ<sub>i</sub> = 1/[q n<sub>i</sub> (μ<sub>n</sub> + μ<sub>p</sub>)]
+            </div>
+            
+            <p><strong>Given values:</strong></p>
+            <ul>
+                <li>q = 1.6 × 10<sup>-19</sup> C</li>
+                <li>μ<sub>n</sub> + μ<sub>p</sub> = 0.13 + 0.05 = 0.18 m²/V·s</li>
+            </ul>
+
+            <p><strong>Calculation:</strong></p>
+            <div class="equation">
+                σ<sub>i</sub> = (1.6 × 10<sup>-19</sup>) × (1.5 × 10<sup>16</sup>) × (0.18) = 4.32 × 10<sup>-4</sup> S/m
+            </div>
+            <div class="equation">
+                ρ<sub>i</sub> = 1/(4.32 × 10<sup>-4</sup>) ≈ 2314.8 Ω·m
+            </div>
+
+            <div class="final-answer">ρ<sub>i</sub> ≈ 2315 Ω·m</div>
+        </div>
+    </div>
+
+    <div class="problem-section">
+        <h2>4. Drift Current Density</h2>
+        
+        <div class="solution">
+            <h3>Part 1: Derivation</h3>
+            <p>Drift current density due to electrons (J<sub>n</sub>) under electric field (ℰ):</p>
+            <ul>
+                <li>Force on electron: F = -qℰ</li>
+                <li>Drift velocity: v<sub>d</sub> = -μ<sub>n</sub>ℰ</li>
+                <li>Current density: J<sub>n</sub> = -q n v<sub>d</sub> = q n μ<sub>n</sub> ℰ</li>
+            </ul>
+            <p>For holes: J<sub>p</sub> = q p μ<sub>p</sub> ℰ</p>
+            
+            <div class="equation">
+                <strong>Total drift current density:</strong><br>
+                J<sub>drift</sub> = q(n μ<sub>n</sub> + p μ<sub>p</sub>)ℰ
+            </div>
+
+            <h3>Part 2: Calculation</h3>
+            <div class="given">
+                <strong>Given:</strong><br>
+                • n = 10<sup>20</sup> m<sup>-3</sup><br>
+                • μ<sub>n</sub> = 0.1 m²/V·s<br>
+                • ℰ = 1000 V/m<br>
+                • Assume p ≈ 0 (n-type dominance)
+            </div>
+
+            <p><strong>Solution:</strong></p>
+            <div class="equation">
+                J<sub>n</sub> = q n μ<sub>n</sub> ℰ = (1.6 × 10<sup>-19</sup>) × (10<sup>20</sup>) × (0.1) × (1000)
+            </div>
+            <div class="equation">
+                J<sub>n</sub> = 1600 A/m²
+            </div>
+
+            <div class="final-answer">J<sub>drift</sub> = 1600 A/m²</div>
+        </div>
+    </div>
+
+    <div class="problem-section">
+        <h2>5. Intrinsic Carrier Concentration</h2>
+        
+        <div class="given">
+            <strong>Given:</strong><br>
+            • T = 300 K<br>
+            • m<sub>e</sub>* = 0.12 m<sub>0</sub>, m<sub>h</sub>* = 0.28 m<sub>0</sub><br>
+            • E<sub>g</sub> = 0.67 eV
+        </div>
+
+        <div class="solution">
+            <h3>Solution:</h3>
+            <p>Intrinsic carrier concentration:</p>
+            <div class="equation">
+                n<sub>i</sub> = √(N<sub>C</sub> N<sub>V</sub>) e<sup>-E<sub>g</sub>/2k<sub>B</sub>T</sup>
+            </div>
+
+            <p><strong>Step 1: Calculate N<sub>C</sub> and N<sub>V</sub></strong></p>
+            <div class="equation">
+                N<sub>C</sub> = 2(2πm<sub>e</sub>*k<sub>B</sub>T/h²)<sup>3/2</sup><br>
+                N<sub>V</sub> = 2(2πm<sub>h</sub>*k<sub>B</sub>T/h²)<sup>3/2</sup>
+            </div>
+
+            <p><strong>Step 2: Use standard formula:</strong></p>
+            <div class="equation">
+                n<sub>i</sub>² = (N<sub>C</sub> N<sub>V</sub>) e<sup>-E<sub>g</sub>/k<sub>B</sub>T</sup>
+            </div>
+
+            <p><strong>Step 3: Substitute values:</strong></p>
+            <ul>
+                <li>k<sub>B</sub>T = 0.02585 eV</li>
+                <li>E<sub>g</sub>/(k<sub>B</sub>T) = 0.67/0.02585 ≈ 25.92</li>
+                <li>Effective density ratio: √(m<sub>e</sub>* m<sub>h</sub>*)/m<sub>0</sub> = √(0.12 × 0.28) ≈ 0.183</li>
+            </ul>
+
+            <p><strong>Calculation:</strong></p>
+            <div class="equation">
+                n<sub>i</sub> = 2.5 × 10<sup>25</sup> · (0.183)<sup>3/2</sup> · e<sup>-25.92/2</sup> m<sup>-3</sup>
+            </div>
+            <div class="equation">
+                n<sub>i</sub> ≈ 2.5 × 10<sup>25</sup> × 0.078 × e<sup>-12.96</sup>
+            </div>
+            <div class="equation">
+                e<sup>-12.96</sup> ≈ 2.33 × 10<sup>-6</sup>
+            </div>
+            <div class="equation">
+                n<sub>i</sub> ≈ 2.5 × 10<sup>25</sup> × 0.078 × 2.33 × 10<sup>-6</sup> ≈ 4.54 × 10<sup>18</sup> m<sup>-3</sup>
+            </div>
+
+            <div class="final-answer">n<sub>i</sub> ≈ 4.54 × 10<sup>18</sup> m<sup>-3</sup></div>
+        </div>
+    </div>
+
+    <div class="formula-summary">
+        <h2>Summary of Key Formulas Used</h2>
+        <ol>
+            <li><strong>Fermi-Dirac:</strong> f(E) = 1/(1 + e<sup>(E - E<sub>F</sub>)/k<sub>B</sub>T</sup>)</li>
+            <li><strong>Fermi Level (n-type):</strong> E<sub>C</sub> - E<sub>F</sub> = k<sub>B</sub>T ln(N<sub>C</sub>/N<sub>D</sub>)</li>
+            <li><strong>Resistivity:</strong> ρ<sub>i</sub> = 1/[q n<sub>i</sub> (μ<sub>n</sub> + μ<sub>p</sub>)]</li>
+            <li><strong>Drift Current:</strong> J<sub>drift</sub> = q(nμ<sub>n</sub> + pμ<sub>p</sub>)ℰ</li>
+            <li><strong>Intrinsic Concentration:</strong> n<sub>i</sub> = √(N<sub>C</sub> N<sub>V</sub>) e<sup>-E<sub>g</sub>/2k<sub>B</sub>T</sup></li>
+        </ol>
+        
+        <p><strong>Note:</strong> All solutions include detailed derivations and numerical evaluations. This document provides comprehensive step-by-step solutions for semiconductor physics problems.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;">
+        <p><em>Document prepared for semiconductor physics study reference</em></p>
+        <p><strong>End of Document</strong></p>
+    </div>
+
+</body>
+</html>
